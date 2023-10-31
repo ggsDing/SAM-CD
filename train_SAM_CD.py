@@ -15,8 +15,7 @@ from utils.utils import AverageMeter
 
 ###################### Data and Model ########################
 from models.SAM_CD import SAM_CD as Net
-#from models.UNet_CD import UNet_CD as Net
-NET_NAME = 'FastSAMs_Adapter_SC3.0T_attn'
+NET_NAME = 'SAM_CD'
 
 from datasets import Levir_CD as RS
 DATA_NAME = 'Levir_CD'
@@ -41,7 +40,7 @@ args = {
     'pred_dir': os.path.join(working_path, 'results', DATA_NAME),
     'chkpt_dir': os.path.join(working_path, 'checkpoints', DATA_NAME),
     'log_dir': os.path.join(working_path, 'logs', DATA_NAME, NET_NAME),
-    'load_path': os.path.join(working_path, 'checkpoints', DATA_NAME, 'FastSAM_Adapter_SC3.0T_e147_OA99.22_F88.31_IoU80.76.pth')}
+    'load_path': os.path.join(working_path, 'checkpoints', DATA_NAME, 'xxx.pth')}
 ###################### Data and Model ######################
 
 if not os.path.exists(args['log_dir']): os.makedirs(args['log_dir'])
@@ -68,8 +67,6 @@ def main():
     train(train_loader, net, optimizer, val_loader)
     writer.close()
     print('Training finished.')
-    # predict(net, args)
-
 
 def train(train_loader, net, optimizer, val_loader):
     bestF = 0.0
@@ -112,7 +109,6 @@ def train(train_loader, net, optimizer, val_loader):
             labels = labels.cpu().detach().numpy()
             outputs = outputs.cpu().detach()
             preds = F.sigmoid(outputs).numpy()
-            # batch_valid_sum = 0
             acc_curr_meter = AverageMeter()
             for (pred, label) in zip(preds, labels):
                 acc, precision, recall, F1, IoU = accuracy(pred, label)
@@ -128,7 +124,6 @@ def train(train_loader, net, optimizer, val_loader):
                 writer.add_scalar('train loss', train_loss.val, running_iter)
                 loss_rec = train_loss.val
                 writer.add_scalar('train accuracy', acc_meter.val, running_iter)
-                # writer.add_scalar('train_aux_loss', train_aux_loss.avg, running_iter)
                 writer.add_scalar('lr', optimizer.param_groups[0]['lr'], running_iter)
 
         val_F, val_acc, val_IoU, val_loss = validate(val_loader, net, curr_epoch)
