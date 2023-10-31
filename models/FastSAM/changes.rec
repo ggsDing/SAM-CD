@@ -1,0 +1,21 @@
+1. /home/qqq/anaconda3/lib/python3.10/site-packages/ultralytics/yolo/engine/predictor.py
+   L246 添加：
+            ms_feats = preds[-1]
+            return ms_feats
+   L276 #yield from self.results
+            
+2. /home/qqq/anaconda3/lib/python3.10/site-packages/ultralytics/nn/modules/head.py
+     L91 添加：   
+          ms_feats = x
+          x = x[:3]
+     L99: return (torch.cat([x, mc], 1), p) if self.export else (torch.cat([x[0], mc], 1), (x[1], mc, p), msfeats)
+
+3. /home/qqq/anaconda3/lib/python3.10/site-packages/ultralytics/yolo/engine/predictor.py
+   L129: comment
+
+4. /ultralytics/nn/tasks.py  L76
+   可添加：
+        self.save.append(1)
+        for m in self.model:
+            if isinstance(m, Segment):
+                m.f = [15, 18, 21, 1]
