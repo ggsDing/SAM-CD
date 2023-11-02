@@ -26,14 +26,6 @@ the following changes are required:
    1) add after line 91:   
 >      ms_feats = x
 >      x = x[:3]
-
-     
->    def forward(self, x):
->        """Return model outputs and mask coefficients if training, otherwise return outputs and mask coefficients."""
->        p = self.proto(x[0])  # mask protos
->        bs = p.shape[0]  # batch size
->        ms_feats = x
->        x = x[:3]
       
    2) line 99, changes it into:
 >      return (torch.cat([x, mc], 1), p) if self.export else (torch.cat([x[0], mc], 1), (x[1], mc, p), ms_feats)
