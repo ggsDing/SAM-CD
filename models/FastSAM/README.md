@@ -23,12 +23,12 @@ the following changes are required:
 >        #    LOGGER.info('')
    
 2. find '/...anaconda_dir.../lib/python3.10/site-packages/ultralytics/nn/modules/head.py'
-   1) add afer line 91£º   
+   1) add afer line 91:   
 >      ms_feats = x
 >      x = x[:3]
-   
+            
       so that it becomes:
-      
+     
 >    def forward(self, x):
 >        """Return model outputs and mask coefficients if training, otherwise return outputs and mask coefficients."""
 >        p = self.proto(x[0])  # mask protos
