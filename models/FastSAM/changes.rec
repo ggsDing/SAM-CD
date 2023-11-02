@@ -10,17 +10,17 @@ the following changes are required:
             
       so that it becomes:
    
-               # Inference
-            with profilers[1]:
-                preds = self.model(im, augment=self.args.augment, visualize=visualize)
-            ms_feats = preds[-1]
-            return ms_feats
+      >         # Inference
+      >      with profilers[1]:
+      >          preds = self.model(im, augment=self.args.augment, visualize=visualize)
+      >      ms_feats = preds[-1]
+      >      return ms_feats
             
    2) comment line 252 to line 276 (to disable the default outputs)
    3) comment line 129 (we already did normalization)
    4) comment line 212&213:
-        #if self.args.verbose:
-        #    LOGGER.info('')
+      >  #if self.args.verbose:
+      >  #    LOGGER.info('')
    
 2. find '/...anaconda_dir.../lib/python3.10/site-packages/ultralytics/nn/modules/head.py'
    1) add afer line 91：   
