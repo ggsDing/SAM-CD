@@ -24,7 +24,7 @@ Our SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
       >    - A
       >    - B
       >  - label
-   2) Find change line 13 in SAM-CD/datasets/Levir_CD.py (or other dataloading .py files), change '/YOUR_DATA_ROOT/' to your own dataset directory.
+   2) Find change line 13 in SAM-CD/datasets/Levir_CD.py (or other dataloading .py files), change '/YOUR_DATA_ROOT/' to your local dataset directory.
 
 
 
