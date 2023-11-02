@@ -34,7 +34,7 @@ the following changes are required:
         x = x[:3]
       
    2) line 99, changes it into:
-      return (torch.cat([x, mc], 1), p) if self.export else (torch.cat([x[0], mc], 1), (x[1], mc, p), msfeats)
+      return (torch.cat([x, mc], 1), p) if self.export else (torch.cat([x[0], mc], 1), (x[1], mc, p), ms_feats)
 
 3. find '/../ultralytics/nn/tasks.py'
    from line 76 we change into:
