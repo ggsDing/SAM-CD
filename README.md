@@ -3,7 +3,7 @@ Pytorch codes of 'Adapting Segment Anything Model for Change Detection in HR Rem
 
 ![alt text](https://github.com/ggsDing/SAM-CD/blob/main/flowchart.png)
 
-Our SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the visual encoder with some modifications.
+The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the visual encoder with some modifications.
 
 
 **How to Use**
