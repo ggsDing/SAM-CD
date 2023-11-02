@@ -2,7 +2,7 @@
 The original FastSAM do not support access to its multi-scale features. To obtain them (including the low-level features),
 the following changes are required:
 
-1. find '/...anaconda_dir.../lib/python3.xx/site-packages/ultralytics/yolo/engine/predictor.py'
+## find '/...anaconda_dir.../lib/python3.xx/site-packages/ultralytics/yolo/engine/predictor.py'
    
    1) add the following after line 244:   
 >            ms_feats = preds[-1]
