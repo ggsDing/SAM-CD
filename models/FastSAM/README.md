@@ -2,9 +2,9 @@
 The original FastSAM do not support access to its multi-scale features. To obtain them (including the low-level features),
 the following changes are required:
 
-## find '/...anaconda_dir.../lib/python3.xx/site-packages/ultralytics/yolo/engine/predictor.py'
+### find '/...anaconda_dir.../lib/python3.xx/site-packages/ultralytics/yolo/engine/predictor.py'
    
-   1) add the following after line 244:   
+   1. add the following after line 244:   
 >            ms_feats = preds[-1]
 >            return ms_feats
             
@@ -16,21 +16,21 @@ the following changes are required:
 >            ms_feats = preds[-1]
 >            return ms_feats
             
-   2) comment line 252 to line 276 (to disable the default outputs)
-   3) comment line 129 (we already did normalization)
-   4) comment line 212&213:
+   2. comment line 252 to line 276 (to disable the default outputs)
+   3. comment line 129 (we already did normalization)
+   4. comment line 212&213:
 >        #if self.args.verbose:
 >        #    LOGGER.info('')
    
-2. find '/...anaconda_dir.../lib/python3.10/site-packages/ultralytics/nn/modules/head.py'
-   1) add after line 91:   
+### find '/...anaconda_dir.../lib/python3.10/site-packages/ultralytics/nn/modules/head.py'
+   1. add after line 91:   
 >      ms_feats = x
 >      x = x[:3]
       
-   2) line 99, changes it into:
+   2. line 99, changes it into:
 >      return (torch.cat([x, mc], 1), p) if self.export else (torch.cat([x[0], mc], 1), (x[1], mc, p), ms_feats)
 
-3. find '/../ultralytics/nn/tasks.py'
+### find '/../ultralytics/nn/tasks.py'
    from line 76 we change into:
 >        y, dt = [], []  # outputs
 >        self.save.append(1)
