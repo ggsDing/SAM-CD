@@ -12,8 +12,7 @@ Our SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
    2) Find 'SAM-CD/models/FastSAM/changes.rec'. Open it in plain text, and modify the Ultralytics source files following the instructions.
 
 2. Dataset preparation.
-   Please split the data into training, validation and test sets and organize them as follows:
-   
+   Please split the data into training, validation and test sets and organize them as follows:   
 >YOUR_DATA_DIR
 >  - train
 >    - A
@@ -26,7 +25,7 @@ Our SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
 >    - B
 >  - label
 
-    Then, find change line 13 in SAM-CD/datasets/Levir_CD.py (or other dataloading .py files), change '/YOUR_DATA_ROOT/' to your own dataset directory.
+Then, find change line 13 in SAM-CD/datasets/Levir_CD.py (or other dataloading .py files), change '/YOUR_DATA_ROOT/' to your own dataset directory.
 
 
 
