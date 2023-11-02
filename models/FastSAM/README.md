@@ -26,8 +26,8 @@ the following changes are required:
    1) add afer line 91:   
 >      ms_feats = x
 >      x = x[:3]
-            
-      so that it becomes:
+
+so that it becomes:
      
 >    def forward(self, x):
 >        """Return model outputs and mask coefficients if training, otherwise return outputs and mask coefficients."""
