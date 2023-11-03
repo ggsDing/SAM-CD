@@ -53,9 +53,9 @@ The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
 
 If you find this work useful or interesting, please consider citing the following BibTeX entry.
 
->@article{ding2023adapting,
->title={Adapting Segment Anything Model for Change Detection in HR Remote Sensing Images},
->author={Ding, Lei and Zhu, Kun and Peng, Daifeng and Tang, Hao and Guo, Haitao},
->journal={arXiv preprint arXiv:2309.01429},
->year={2023}
->}
+> @article{ding2023adapting,
+> title={Adapting Segment Anything Model for Change Detection in HR Remote Sensing Images},
+> author={Ding, Lei and Zhu, Kun and Peng, Daifeng and Tang, Hao and Guo, Haitao},
+> journal={arXiv preprint arXiv:2309.01429},
+> year={2023}
+> }
