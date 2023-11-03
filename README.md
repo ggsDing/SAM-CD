@@ -33,7 +33,7 @@ The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
    
    training CD with the proposed task-agnostic semantic learning:
    
-   >  train_SAM_CD.py
+   >  python train_SAM_CD.py
    
    line 16-45 are the major training args, which can be changed to load different datasets, models and adjust the training settings.
 
