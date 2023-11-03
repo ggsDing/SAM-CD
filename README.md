@@ -13,27 +13,27 @@ The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
 
 2. Dataset preparation.
    1) Please split the data into training, validation and test sets and organize them as follows:
-      >YOUR_DATA_DIR
-      >  - train
-      >    - A
-      >    - B
-      >  - val
-      >    - A
-      >    - B
-      >  - test
-      >    - A
-      >    - B
-      >  - label
+`      YOUR_DATA_DIR
+        - train
+          - A
+          - B
+        - val
+          - A
+          - B
+        - test
+          - A
+          - B
+        - label`
    2) Find change line 13 in [SAM-CD/datasets/Levir_CD.py](https://github.com/ggsDing/SAM-CD/blob/main/datasets/Levir_CD.py) (or other data-loading .py files), change '/YOUR_DATA_ROOT/' to your local dataset directory.
 
 3. Training
    
    classic CD training:
-   'python train_CD.py'
+   `python train_CD.py`
    
    training CD with the proposed task-agnostic semantic learning:
    
-   'python train_SAM_CD.py'
+   `python train_SAM_CD.py`
    
    line 16-45 are the major training args, which can be changed to load different datasets, models and adjust the training settings.
 
@@ -41,11 +41,11 @@ The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
    
    inference on test sets: set the chkpt_path and run
    
-   'python pred_CD.py'
+   `python pred_CD.py`
    
    evaluation of accuracy: set the prediction dir and GT dir, and run
    
-   'python eval_CD.py'
+   `python eval_CD.py`
    
 (More details to be added...)
 
@@ -59,3 +59,4 @@ author={Ding, Lei and Zhu, Kun and Peng, Daifeng and Tang, Hao and Yang, Kuiwu a
 journal={arXiv preprint arXiv:2309.01429},
 year={2023}
 }
+'''
