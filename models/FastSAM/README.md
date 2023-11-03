@@ -8,9 +8,9 @@ the following changes are required:
 ```
             ms_feats = preds[-1]
             return ms_feats
-```
-            
+```            
       so that it becomes:
+      
 ```   
             # Inference
             with profilers[1]:
@@ -52,8 +52,8 @@ the following changes are required:
             if profile:
                 self._profile_one_layer(m, x, dt)
             x = m(x)  # run
+            y.append(x if m.i in self.save else None)  # save output
+            if visualize:
+                feature_visualization(x, m.type, m.i, save_dir=visualize)
+        return x
 ```
-`            y.append(x if m.i in self.save else None)  # save output
-`            if visualize:
-`                feature_visualization(x, m.type, m.i, save_dir=visualize)
-`        return x
