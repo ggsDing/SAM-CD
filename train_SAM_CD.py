@@ -24,7 +24,7 @@ DATA_NAME = 'Levir_CD'
 ###################### Data and Model ########################
 
 
-######################## Parameters ########################
+########################## Parameters ########################
 args = {
     'train_batch_size': 4,
     'val_batch_size': 4,
@@ -41,7 +41,7 @@ args = {
     'chkpt_dir': os.path.join(working_path, 'checkpoints', DATA_NAME),
     'log_dir': os.path.join(working_path, 'logs', DATA_NAME, NET_NAME),
     'load_path': os.path.join(working_path, 'checkpoints', DATA_NAME, 'xxx.pth')}
-###################### Data and Model ######################
+########################## Parameters ########################
 
 if not os.path.exists(args['log_dir']): os.makedirs(args['log_dir'])
 if not os.path.exists(args['chkpt_dir']): os.makedirs(args['chkpt_dir'])
