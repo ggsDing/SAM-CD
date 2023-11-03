@@ -1,4 +1,3 @@
-
 The original FastSAM do not support access to its multi-scale features. To obtain them (including the low-level features),
 the following changes are required:
 
@@ -29,13 +28,13 @@ the following changes are required:
 ```
    
 ### find '/...anaconda_dir.../lib/python3.10/site-packages/ultralytics/nn/modules/head.py'
-     + add after line 91:   
+     1. add after line 91:   
 ```
       ms_feats = x
       x = x[:3]
 ```
       
-     + line 99, changes it into:
+     2. line 99, changes it into:
      
 ```
       return (torch.cat([x, mc], 1), p) if self.export else (torch.cat([x[0], mc], 1), (x[1], mc, p), ms_feats)
