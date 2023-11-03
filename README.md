@@ -33,7 +33,6 @@ The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
    `python train_CD.py`
    
    training CD with the proposed task-agnostic semantic learning:
-   
    `python train_SAM_CD.py`
    
    line 16-45 are the major training args, which can be changed to load different datasets, models and adjust the training settings.
@@ -53,11 +52,10 @@ The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
 ## Cite SAM-CD
 
 If you find this work useful or interesting, please consider citing the following BibTeX entry.
-'''
-@article{ding2023adapting,
+
+`@article{ding2023adapting,
 title={Adapting Segment Anything Model for Change Detection in HR Remote Sensing Images},
 author={Ding, Lei and Zhu, Kun and Peng, Daifeng and Tang, Hao and Yang, Kuiwu and Lorenzo, Bruzzone},
 journal={arXiv preprint arXiv:2309.01429},
 year={2023}
-}
-'''
+}`
