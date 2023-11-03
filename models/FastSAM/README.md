@@ -3,11 +3,12 @@ The original FastSAM do not support access to its multi-scale features. To obtai
 the following changes are required:
 
 * find '/...anaconda_dir.../lib/python3.xx/site-packages/ultralytics/yolo/engine/predictor.py'
-     - add the following after line 244:   
+     - add the following after line 244:
 ```
             ms_feats = preds[-1]
             return ms_feats
-```            
+```
+        
       so that it becomes:
       
 ```   
@@ -21,6 +22,7 @@ the following changes are required:
      - comment line 252 to line 276 (to disable the default outputs)
      - comment line 129 (we already did normalization)
      - comment line 212&213:
+     
 ```
         #if self.args.verbose:
         #    LOGGER.info('')
@@ -34,12 +36,14 @@ the following changes are required:
 ```
       
      - line 99, changes it into:
+     
 ```
       return (torch.cat([x, mc], 1), p) if self.export else (torch.cat([x[0], mc], 1), (x[1], mc, p), ms_feats)
 ```
 
 * find '/../ultralytics/nn/tasks.py'
      - from line 76 we change into:
+
 ```
         y, dt = [], []  # outputs
         self.save.append(1)
