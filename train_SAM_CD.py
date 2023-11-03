@@ -37,6 +37,7 @@ args = {
     'momentum': 0.9,
     'print_freq': 50,
     'predict_step': 5,
+    'crop_size': 512,
     'pred_dir': os.path.join(working_path, 'results', DATA_NAME),
     'chkpt_dir': os.path.join(working_path, 'checkpoints', DATA_NAME),
     'log_dir': os.path.join(working_path, 'logs', DATA_NAME, NET_NAME),
@@ -56,9 +57,9 @@ def main():
         net = torch.nn.DataParallel(net, [int(id) for id in args['multi_gpu'].split(',')])
     net.to(device=torch.device('cuda', int(args['dev_id'])))
 
-    train_set = RS.RS('train', random_crop=True, crop_nums=10, crop_size=512, random_flip=True) #'5_train_supervised', 
+    train_set = RS.RS('train', random_crop=True, crop_nums=10, crop_size=args['crop_size'], random_flip=True) #'5_train_supervised', 
     train_loader = DataLoader(train_set, batch_size=args['train_batch_size'], num_workers=4, shuffle=True)
-    val_set = RS.RS('val', sliding_crop=False, crop_size=512, random_flip=False)
+    val_set = RS.RS('val', sliding_crop=False, crop_size=args['crop_size'], random_flip=False)
     val_loader = DataLoader(val_set, batch_size=args['val_batch_size'], num_workers=4, shuffle=False)
 
     optimizer = optim.SGD(filter(lambda p: p.requires_grad, net.parameters()), args['lr'],
