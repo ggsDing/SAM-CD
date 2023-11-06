@@ -11,7 +11,6 @@ from torch.utils.data import DataLoader
 from collections import OrderedDict
 
 ################## Model ##################
-#from models.SamAdaptSegmentor import SamSegmentor as Net
 from models.SAM_CD import SAM_CD as Net
 NET_NAME = 'SAM_CD'
 
