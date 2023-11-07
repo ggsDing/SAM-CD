@@ -8,11 +8,11 @@ The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
 
 ## How to Use
 1. Installation
-   1) Install [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) following the instructions.
-   2) Find ['SAM-CD/models/FastSAM/README.md'](https://github.com/ggsDing/SAM-CD/blob/main/models/FastSAM/README.md). Open it in plain text, and modify the Ultralytics source files following the instructions.
+   * Install [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) following the instructions.
+   * Find ['SAM-CD/models/FastSAM/README.md'](https://github.com/ggsDing/SAM-CD/blob/main/models/FastSAM/README.md). Open it in plain text, and modify the Ultralytics source files following the instructions.
 
 2. Dataset preparation.
-   1) Please split the data into training, validation and test sets and organize them as follows:
+   * Please split the data into training, validation and test sets and organize them as follows:
 ```
       YOUR_DATA_DIR
         - train
@@ -27,7 +27,7 @@ The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
         - label
 ```
 
-   2) Find change line 13 in [SAM-CD/datasets/Levir_CD.py](https://github.com/ggsDing/SAM-CD/blob/main/datasets/Levir_CD.py) (or other data-loading .py files), change `/YOUR_DATA_ROOT/` to your local dataset directory.
+   * Find change line 13 in [SAM-CD/datasets/Levir_CD.py](https://github.com/ggsDing/SAM-CD/blob/main/datasets/Levir_CD.py) (or other data-loading .py files), change `/YOUR_DATA_ROOT/` to your local dataset directory.
 
 3. Training
    
