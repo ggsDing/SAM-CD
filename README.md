@@ -6,7 +6,7 @@ Pytorch codes of 'Adapting Segment Anything Model for Change Detection in HR Rem
 The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the visual encoder with some modifications.
 
 
-**How to Use**
+## How to Use
 1. Installation
    1) Install [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) following the instructions.
    2) Find ['SAM-CD/models/FastSAM/README.md'](https://github.com/ggsDing/SAM-CD/blob/main/models/FastSAM/README.md). Open it in plain text, and modify the Ultralytics source files following the instructions.
