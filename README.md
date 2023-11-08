@@ -15,16 +15,16 @@ The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
    * Please split the data into training, validation and test sets and organize them as follows:
 ```
       YOUR_DATA_DIR
-        - train
-          - A
-          - B
-        - val
-          - A
-          - B
-        - test
-          - A
-          - B
-        - label
+      ├── train
+      │   ├── A
+      │   ├── B
+      ├── val
+      │   ├── A
+      │   ├── B
+      ├── test
+      │   ├── A
+      │   ├── B
+      ├── label
 ```
 
    * Find change line 13 in [SAM-CD/datasets/Levir_CD.py](https://github.com/ggsDing/SAM-CD/blob/main/datasets/Levir_CD.py) (or other data-loading .py files), change `/YOUR_DATA_ROOT/` to your local dataset directory.
