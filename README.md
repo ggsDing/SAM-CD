@@ -52,6 +52,15 @@ The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
    
 (More details to be added...)
 
+## Pretrained Models
+
+For readers to easily evaluate the accuracy, we provide the trained weights of the SAM-CD.
+
+[Drive](https://drive.google.com/drive/folders/14tNtID43o-LHs8VaMK5jai1Uf8NqMDAW?usp=sharing)  
+[Baidu](https://pan.baidu.com/s/1V25TFGL5V05ZB5ttFXFSEA?pwd=SMCD) (pswd: SMCD)
+
+(pre-trained weights on the WHU-CD dataset to be updated later)
+
 ## Cite SAM-CD
 
 If you find this work useful or interesting, please consider citing the following BibTeX entry.
