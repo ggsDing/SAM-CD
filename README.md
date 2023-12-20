@@ -19,13 +19,15 @@ The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
       ├── train
       │   ├── A
       │   ├── B
+      │   ├── label
       ├── val
       │   ├── A
       │   ├── B
+      │   ├── label
       ├── test
       │   ├── A
       │   ├── B
-      ├── label
+      │   ├── label
 ```
 
    * Find change line 13 in [SAM-CD/datasets/Levir_CD.py](https://github.com/ggsDing/SAM-CD/blob/main/datasets/Levir_CD.py) (or other data-loading .py files), change `/YOUR_DATA_ROOT/` to your local dataset directory.
