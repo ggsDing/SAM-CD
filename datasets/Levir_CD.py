@@ -115,10 +115,10 @@ def rand_flip_CD(img1, img2, label):
         return img1[::-1, ::-1, :].copy(), img2[::-1, ::-1, :].copy(), label[::-1, ::-1].copy()
 
 def read_RSimages(mode, read_list=False):
-    #assert mode in ['train0', 'val0', 'test0']
+    assert mode in ['train', 'val', 'test']
     img_A_dir = os.path.join(root, mode, 'A')
     img_B_dir = os.path.join(root, mode, 'B')
-    label_dir = os.path.join(root, 'label')
+    label_dir = os.path.join(root, mode, 'label')
     
     if mode=='train' and read_list:
         list_path=os.path.join(root, mode+'0.4_info.txt')
