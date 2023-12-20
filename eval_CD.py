@@ -110,5 +110,5 @@ if __name__ == '__main__':
     F1 = stats.hmean([precision, recall])
     print('Eval results: Acc %.2f, precision %.2f, recall %.2f, F1 %.2f, mIoU %.2f.'%(acc*100, precision*100, recall*100, F1*100, mIoU*100))
     
-    #These are the evaluation metrics provided in CTD-Former (https://ieeexplore.ieee.org/document/10139838).
+    #Below are the evaluation metrics provided in CTD-Former (https://ieeexplore.ieee.org/document/10139838).
     mIoU = get_mIoU(2, GTs, preds)
