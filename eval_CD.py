@@ -62,9 +62,9 @@ def calc_TP(pred, label):
     
     GT = (label).sum()
     TP = (pred * label).sum()
-    FP = (pred * (1-label)).sum()
-    FN = ((1-pred) * (label)).sum()
-    TN = ((1-pred) * (1-label)).sum()
+    FP = (pred * (~label)).sum()
+    FN = ((~pred) * (label)).sum()
+    TN = ((~pred) * (~label)).sum()
     return TP, TN, FP, FN
 
 if __name__ == '__main__':
@@ -94,8 +94,7 @@ if __name__ == '__main__':
             GT = GT//255 #.clip(max=1)
             preds.append(pred)
             GTs.append(GT)
-            
-            #acc, precision, recall, F1, IoU = binary_accuracy(pred, GT)
+        
             TP, TN, FP, FN = calc_TP(pred, GT[:h,:w])
             acc_meter.update(TP, TN, FP, FN)
             if not idx%10: print('Eval idx %d/%d processed.'%(idx, num_valid))
