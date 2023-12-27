@@ -171,8 +171,8 @@ def predict(net, opt):
                       cropB = imgB_crops[idx]
                       tensorA = transF.to_tensor(cropA).unsqueeze(0).to(torch.device('cuda', int(opt.dev_id))).float()
                       tensorB = transF.to_tensor(cropB).unsqueeze(0).to(torch.device('cuda', int(opt.dev_id))).float()
-                      output = net(tensorA, tensorB)
-                      output, _, _ = F.sigmoid(output)
+                      output, _, _ = net(tensorA, tensorB)
+                      output = F.sigmoid(output)
                       if opt.TTA:
                           tensorA_v = torch.flip(tensorA, [2])
                           tensorB_v = torch.flip(tensorB, [2])
@@ -199,8 +199,8 @@ def predict(net, opt):
               else:
                   tensorA = transF.to_tensor(imgA).unsqueeze(0).to(torch.device('cuda', int(opt.dev_id))).float()
                   tensorB = transF.to_tensor(imgB).unsqueeze(0).to(torch.device('cuda', int(opt.dev_id))).float()            
-                  output = net(tensorA, tensorB)
-                  output, _, _ = F.sigmoid(output)
+                  output, _, _ = net(tensorA, tensorB)
+                  output = F.sigmoid(output)
                   if opt.TTA:
                       tensorA_v = torch.flip(tensorA, [2])
                       tensorB_v = torch.flip(tensorB, [2])
