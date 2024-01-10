@@ -60,7 +60,7 @@ The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the vis
 In the following, we summarize links to some frequently used CD datasets:
 
 * [LEVIR-CD](https://justchenhao.github.io/LEVIR/)
-* [WHU-CD](https://study.rsgis.whu.edu.cn/pages/download/)
+* [WHU-CD](https://study.rsgis.whu.edu.cn/pages/download/) [(baidu)](https://pan.baidu.com/s/1Z4dMmoGpKf2WfCFiNzb6-w?pwd=CLCD )
 * [CLCD (Baidu)](https://pan.baidu.com/s/1iZtAq-2_vdqoz1RnRtivng?pwd=CLCD)
 * [S2Looking](https://github.com/S2Looking/Dataset)
 * [SYSU-CD](https://github.com/liumency/SYSU-CD)
