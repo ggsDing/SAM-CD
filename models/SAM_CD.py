@@ -88,6 +88,7 @@ class SAM_CD(nn.Module):
         iou: float=0.9,
         imgsz: int=1024,
         retina_masks: bool=True,
+        done_warmup: bool=True,
         ):
         super(SAM_CD, self).__init__()
         self.model = FastSAM(model_name)
