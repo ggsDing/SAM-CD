@@ -1,5 +1,5 @@
 # SAM-CD
-Pytorch codes of **Adapting Segment Anything Model for Change Detection in HR Remote Sensing Images** [[paper](http://arxiv.org/abs/2309.01429)]
+Pytorch codes of **Adapting Segment Anything Model for Change Detection in HR Remote Sensing Images** [[paper](https://ieeexplore.ieee.org/document/10443350)]
 
 ![alt text](https://github.com/ggsDing/SAM-CD/blob/main/flowchart.png)
 
