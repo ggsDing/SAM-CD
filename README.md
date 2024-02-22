@@ -80,8 +80,10 @@ If you find this work useful or interesting, please consider citing the followin
 ```
 @article{ding2023adapting,
 title={Adapting Segment Anything Model for Change Detection in HR Remote Sensing Images},
-author={Ding, Lei and Zhu, Kun and Peng, Daifeng and Tang, Hao and Yang, Kuiwu and Lorenzo, Bruzzone},
-journal={arXiv preprint arXiv:2309.01429},
-year={2023}
+author={Ding, Lei and Zhu, Kun and Peng, Daifeng and Tang, Hao and Yang, Kuiwu and Bruzzone, Lorenzo},
+journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+year={2024},
+doi={10.1109/TGRS.2024.3368168}
 }
+
 ```
