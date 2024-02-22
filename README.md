@@ -78,7 +78,7 @@ For readers to easily evaluate the accuracy, we provide the trained weights of t
 If you find this work useful or interesting, please consider citing the following BibTeX entry.
 
 ```
-@article{ding2023adapting,
+@article{ding2024adapting,
 title={Adapting Segment Anything Model for Change Detection in HR Remote Sensing Images},
 author={Ding, Lei and Zhu, Kun and Peng, Daifeng and Tang, Hao and Yang, Kuiwu and Bruzzone, Lorenzo},
 journal={IEEE Transactions on Geoscience and Remote Sensing}, 
