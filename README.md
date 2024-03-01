@@ -83,6 +83,8 @@ title={Adapting Segment Anything Model for Change Detection in HR Remote Sensing
 author={Ding, Lei and Zhu, Kun and Peng, Daifeng and Tang, Hao and Yang, Kuiwu and Bruzzone, Lorenzo},
 journal={IEEE Transactions on Geoscience and Remote Sensing}, 
 year={2024},
+volume={62},
+pages={1-11},
 doi={10.1109/TGRS.2024.3368168}
 }
 
