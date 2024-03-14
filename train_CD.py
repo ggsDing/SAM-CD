@@ -101,6 +101,8 @@ def train(train_loader, net, optimizer, val_loader):
                 imgs_A = imgs_A.to(torch.device('cuda', int(args['dev_id']))).float()
                 imgs_B = imgs_B.to(torch.device('cuda', int(args['dev_id']))).float()
                 labels = labels.to(torch.device('cuda', int(args['dev_id']))).float().unsqueeze(1)
+            else:  # CPU
+                labels = labels.float().unsqueeze(1)
 
             optimizer.zero_grad()
             outputs = net(imgs_A, imgs_B)  #
@@ -164,6 +166,8 @@ def validate(val_loader, net, curr_epoch):
             imgs_A = imgs_A.to(torch.device('cuda', int(args['dev_id']))).float()
             imgs_B = imgs_B.to(torch.device('cuda', int(args['dev_id']))).float()
             labels = labels.to(torch.device('cuda', int(args['dev_id']))).float().unsqueeze(1)
+        else:  # CPU
+            labels = labels.float().unsqueeze(1)
 
         with torch.no_grad():
             outputs = net(imgs_A, imgs_B)
