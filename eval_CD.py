@@ -3,7 +3,7 @@ import math
 import numpy as np
 from skimage import io, measure
 from scipy import stats
-from metric_tool import get_mIoU
+from utils.metric_tool import get_mIoU
 
 class AverageMeter(object):
     """Computes and stores the average and current value"""
