@@ -1,5 +1,5 @@
 import os
-import math
+
 import numpy as np
 from skimage import io, measure
 from scipy import stats
