@@ -5,7 +5,8 @@ Pytorch codes of **Adapting Segment Anything Model for Change Detection in HR Re
 
 The SAM-CD adopts [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) as the visual encoder with some modifications.
 
-2024-4-30 Update:
+## 2024-4-30 Update:
+
 SAM-CD now supports access to [efficientSAM](https://github.com/yformer/EfficientSAM). Check the updated model at ```models/effSAM_CD.py``` [link](https://github.com/ggsDing/SAM-CD/blob/main/models/effSAM_CD.py) (prior installation of efficientSAM at the project folder is required). However, direct integration of efficientSAM may cause an accuracy drop, so there is space to further improve the SAM-CD architecture.
 
 ## How to Use
